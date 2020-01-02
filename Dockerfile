@@ -30,19 +30,19 @@ RUN apt-get update \
 	libncurses5-dev \
 	nano \
 	vim \
-  autopoint \
+  	autopoint \
 	gperf \
 	python-docutils \	
 	sudo \
 	module-init-tools \
 	wget \
 	bsdtar \
-  unzip \
+  	unzip \
 	&& mkdir -p /home/rt-n56u/toolchain-mipsel \
 	&& mkdir /opt/rt-n56u \
-  && cd /opt/rt-n56u
+  && cd /opt/rt-n56u \
   && wget --no-check-certificate https://gitlab.com/dm38/padavan-ng/-/archive/master/padavan-ng-master.zip?path=toolchain -O toolchain.zip \
-  && unzip toolchain.zip
+  && unzip toolchain.zip \
 	&& cd /opt/rt-n56u/toolchain \
 	&& ./clean_sources.sh \
 	&& ./build_toolchain.sh \
