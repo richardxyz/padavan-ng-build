@@ -43,7 +43,7 @@ RUN apt-get update \
   	&& cd /opt/rt-n56u \
   	&& wget --no-check-certificate https://gitlab.com/dm38/padavan-ng/-/archive/master/padavan-ng-master.zip?path=toolchain -O toolchain.zip \
   	&& unzip toolchain.zip \
-	&& cd /opt/rt-n56u/toolchain \
+	&& cd /opt/rt-n56u/padavan-ng-master-toolchain/toolchain \
 	&& ./clean_sources.sh \
 	&& ./build_toolchain.sh \
  	&& ls -l /opt/rt-n56u/toolchain 
