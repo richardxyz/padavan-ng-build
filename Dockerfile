@@ -38,6 +38,7 @@ RUN apt-get update \
 	wget \
 	bsdtar \
   	unzip \
+	help2man libtool-bin \
 	&& mkdir -p /home/rt-n56u/toolchain-mipsel \
 	&& mkdir /opt/rt-n56u \
   	&& cd /opt/rt-n56u \
@@ -46,7 +47,7 @@ RUN apt-get update \
 	&& cd /opt/rt-n56u/padavan-ng-master-toolchain/toolchain \
 	&& ./clean_sources.sh \
 	&& ./build_toolchain.sh \
- 	&& ls -l /opt/rt-n56u/toolchain 
+ 	&& ls -l /opt/rt-n56u/padavan-ng-master-toolchain/toolchain 
 
 #	&& mv toolchain-3.4.x /home/rt-n56u/toolchain-mipsel/ \
 #	&& cd /opt && rm -rf /opt/rt-n56u
