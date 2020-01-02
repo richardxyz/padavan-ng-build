@@ -40,15 +40,16 @@ RUN apt-get update \
   	unzip \
 	&& mkdir -p /home/rt-n56u/toolchain-mipsel \
 	&& mkdir /opt/rt-n56u \
-  && cd /opt/rt-n56u \
-  && wget --no-check-certificate https://gitlab.com/dm38/padavan-ng/-/archive/master/padavan-ng-master.zip?path=toolchain -O toolchain.zip \
-  && unzip toolchain.zip \
+  	&& cd /opt/rt-n56u \
+  	&& wget --no-check-certificate https://gitlab.com/dm38/padavan-ng/-/archive/master/padavan-ng-master.zip?path=toolchain -O toolchain.zip \
+  	&& unzip toolchain.zip \
 	&& cd /opt/rt-n56u/toolchain \
 	&& ./clean_sources.sh \
 	&& ./build_toolchain.sh \
-  && ls -l /opt/rt-n56u/toolchain 
-//	&& mv toolchain-3.4.x /home/rt-n56u/toolchain-mipsel/ \
-//	&& cd /opt && rm -rf /opt/rt-n56u
+ 	&& ls -l /opt/rt-n56u/toolchain 
+
+#	&& mv toolchain-3.4.x /home/rt-n56u/toolchain-mipsel/ \
+#	&& cd /opt && rm -rf /opt/rt-n56u
 	
 WORKDIR /opt
 
